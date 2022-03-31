@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+:root {
+  --violet: hsl(263, 55%, 52%);
+  --dark-gray-blue: hsl(217, 19%, 35%);
+  --dark-gray-blue-70: hsla(217, 19%, 35%, 70%);
+  --dark-gray-blue-50: hsla(217, 19%, 35%, 50%);
+  --black-blue: hsl(219, 29%, 14%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-gray-blue: hsl(210, 46%, 95%);
+  --light-gray-blue-70: hsla(210, 46%, 95%, 70%);
+  --light-gray-blue-50: hsl(210, 46%, 95%, 50%);
+  --white: hsl(0,0%,100%);
+  --white-70-op: hsla(0,0%,100%,70%);
+  --white-50-op: hsla(0,0%,100%,50%);
+}
+
+html {
+  font-size: 13px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1em;
+  max-width: 100vw;
+  background: var(--light-gray-blue);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+body h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+body h4 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  max-width: 95%;
+}
+
+body p {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.65em;
+  max-width: 95%;
+  margin-top: -1em;
+}
+
+main {
+  width: 85%;
+  min-height: 75vh;
+  margin: 5em auto;
+  display: -ms-grid;
+  display: grid;
+  gap: 2em 2.5em;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+}
+
+@media (max-width: 85em) {
+  main {
+    display: block;
+  }
+}
+
+.quote-card {
+  padding: 1em 2.5em;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 5em 5em 12em -5em var(--dark-gray-blue-50);
+          box-shadow: 5em 5em 12em -5em var(--dark-gray-blue-50);
+}
+
+@media (max-width: 85em) {
+  .quote-card {
+    margin: 1em auto;
+  }
+}
+
+.quote-card .card-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1.5em;
+          column-gap: 1.5em;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: -1em;
+}
+
+.quote-card .card-top img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 3.5em;
+  height: 3.5em;
+  border: solid 0.2em var(--white-70-op);
+  border-radius: 50px;
+}
+
+.quote-card .card-top .quote-src {
+  line-height: 0.5;
+}
+
+.quote-card .quote-text {
+  max-width: 100%;
+  padding: 0;
+  margin: 0em;
+}
+
+.quote-card.daniel {
+  position: relative;
+  background-color: var(--violet);
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+  z-index: 2;
+}
+
+.quote-card.daniel h2, .quote-card.daniel h4 {
+  color: var(--white);
+}
+
+.quote-card.daniel h3 {
+  color: var(--white-50-op);
+}
+
+.quote-card.daniel p {
+  color: var(--white-70-op);
+}
+
+.quote-card.daniel .quote-icon {
+  width: 11em;
+  position: absolute;
+  z-index: -1;
+  right: 15%;
+  top: 0%;
+}
+
+.quote-card.jonathan {
+  background-color: var(--dark-gray-blue);
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / span 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+}
+
+.quote-card.jonathan h2, .quote-card.jonathan h4 {
+  color: var(--white);
+}
+
+.quote-card.jonathan h3 {
+  color: var(--white-50-op);
+}
+
+.quote-card.jonathan p {
+  color: var(--white-70-op);
+}
+
+.quote-card.jeanette {
+  background-color: var(--white);
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / span 1;
+}
+
+.quote-card.jeanette h2, .quote-card.jeanette h4 {
+  color: var(--dark-gray-blue);
+}
+
+.quote-card.jeanette h3 {
+  color: var(--dark-gray-blue-50);
+}
+
+.quote-card.jeanette p {
+  color: var(--dark-gray-blue-70);
+}
+
+.quote-card.patrick {
+  background-color: var(--black-blue);
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / span 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / span 1;
+}
+
+.quote-card.patrick img {
+  border: solid 0.2rem var(--violet);
+}
+
+.quote-card.patrick h2, .quote-card.patrick h4 {
+  color: var(--light-gray-blue);
+}
+
+.quote-card.patrick h3 {
+  color: var(--light-gray-blue-50);
+}
+
+.quote-card.patrick p {
+  color: var(--light-gray-blue-70);
+}
+
+.quote-card.kira {
+  background-color: var(--white);
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / span 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+}
+
+.quote-card.kira h2, .quote-card.kira h4 {
+  color: var(--dark-gray-blue);
+}
+
+.quote-card.kira h3 {
+  color: var(--dark-gray-blue-50);
+}
+
+.quote-card.kira p {
+  color: var(--dark-gray-blue-70);
+}
+/*# sourceMappingURL=style.css.map */
